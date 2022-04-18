@@ -47,7 +47,6 @@ export const renderAllPlayers = (playerList) => {
   const button = deleteBtns[i];
   button.addEventListener('click', async () => {
    await removePlayer(button.dataset.id);
-   //returning id is undefined
    console.log(button.dataset.id)
    const players = await fetchAllPlayers();
    renderAllPlayers(players);
